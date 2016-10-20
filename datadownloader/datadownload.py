@@ -33,7 +33,7 @@ if __name__ == "__main__":
     warnings.filterwarnings("ignore")
 
     # starting point
-    src_ = "http:/ratedata.gaincapital.com/"
+    src_ = "http://ratedata.gaincapital.com/"
 
     # initialize session
     s = requests.Session()
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     for link in soup.find_all('a'):
         l = link.get('href')
         if "0" in l:
-            first_level.append("http://ratedata.gaincapital.com/" + l[2:])
+            first_level.append(src_ + l[2:])
 
     # get second level
     next_level = []
