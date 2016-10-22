@@ -95,7 +95,7 @@ if __name__ == "__main__":
 
     for g in range(len(to_down)):
         # open Session
-        s.requests.Session()
+        s = requests.Session()
         print("Downloading %s" % to_down[g])
 
         #make name of file and path
